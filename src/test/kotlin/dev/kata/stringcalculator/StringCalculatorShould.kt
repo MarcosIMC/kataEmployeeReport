@@ -7,16 +7,11 @@ import org.mockito.kotlin.mock
 
 internal class StringCalculatorShould {
     @Test
-    fun `throw not implemented`() {
+    fun `work`() {
+        val stringCalculator = StringCalculator()
 
-        val dependencyMock = mock<StringCalculatorDependency> {
-            on { doSomething() }
-            doThrow(NotImplementedError("Time to do some TDD..."))
-        }
+        val result = stringCalculator.execute()
 
-        assertThatExceptionOfType(NotImplementedError::class.java)
-            .isThrownBy {
-                StringCalculator(dependencyMock).execute()
-            }.withMessage("Time to do some TDD...")
+        assertThat(result).isEqualTo(0)
     }
 }
