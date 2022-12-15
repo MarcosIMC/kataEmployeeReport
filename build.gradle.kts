@@ -17,7 +17,7 @@ dependencies {
     testImplementation(kotlin("test"))
     testImplementation("org.assertj:assertj-core:3.23.1")
     testImplementation("org.mockito.kotlin:mockito-kotlin:4.1.0")
-    testImplementation("org.mockito:mockito-inline:4.9.0")
+    testImplementation("org.mockito:mockito-inline:4.10.0")
 }
 
 tasks.test {
